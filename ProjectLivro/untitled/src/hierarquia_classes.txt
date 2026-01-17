@@ -1,0 +1,7 @@
+Produto -> Livro -> Livro Fisico
+                 -> Ebook
+                 -> MiniLivro
+
+Produto          -> Revista // uma revista nao é um tipo de livro ela é um tipo Produto
+
+isso porque podemos passar qualquer produto como tipo independente do seu subtipo ou subclasse
