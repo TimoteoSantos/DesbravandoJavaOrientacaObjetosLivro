@@ -1,5 +1,9 @@
+package br.com.casadocodigo.livraria.produtos;
+
+import br.com.casadocodigo.livraria.Autor;
+
 /*essa classe implementa a interface Produtos suas classes filhas tambem serao do mesmo tipo Produto */
-public abstract class Livro implements  Produto {
+public abstract class Livro implements Produto {
 
     private String nome;
     private String descricao;
@@ -55,7 +59,7 @@ public abstract class Livro implements  Produto {
         this.autor = autor;
     }
 
-    void mostrarDetalhes(){
+    public void mostrarDetalhes(){
 
         System.out.println("[ Mostrando detalhes do livro ]");
         System.out.println("Nome: " + nome);
@@ -64,7 +68,7 @@ public abstract class Livro implements  Produto {
         System.out.println("ISBN: " + isbn);
 
         if (this.temAutor()){
-            autor.mostrarDetalhes();;
+            this.autor.mostrarDetalhes();;
         }
         System.out.println("--");
     }

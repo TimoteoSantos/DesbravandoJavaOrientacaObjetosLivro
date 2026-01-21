@@ -1,3 +1,10 @@
+package br.com.casadocodigo.livraria.teste;
+
+import br.com.casadocodigo.livraria.Autor;
+import br.com.casadocodigo.livraria.produtos.Ebook;
+import  br.com.casadocodigo.livraria.produtos.LivroFisico;
+import br.com.casadocodigo.livraria.produtos.CarrinhoDeCompras;
+
 public class RegistroDeVendas {
 
     public static void main(String[] args){
@@ -12,13 +19,19 @@ public class RegistroDeVendas {
         fisico.setValor(10.00);
 
         if (fisico.aplicarDescontoDeDezPorcento()){
-            System.out.println(fisico.getValor());
+           // System.out.println(fisico.getValor());
         }
+
+        Ebook ebook = new Ebook(autor);
+        ebook.setValor(10.00);
+        ebook.acrescimo(0.08);
+        System.out.println(ebook.getValor());
+
 
         //enviando para o carrinho de compras
         CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
         carrinho.adiciona(fisico);
-        System.out.println("Total: " + carrinho.getTotal());
+        //System.out.println("Total: " + carrinho.getTotal());
     }
 
 }

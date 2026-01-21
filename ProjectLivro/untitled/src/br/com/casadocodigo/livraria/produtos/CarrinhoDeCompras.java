@@ -1,3 +1,5 @@
+package br.com.casadocodigo.livraria.produtos;
+
 public class CarrinhoDeCompras {
     //um atributo que guarda o total
     private double total;
@@ -9,9 +11,7 @@ public class CarrinhoDeCompras {
         total += produto.getValor();// todos os objetos passados tem esse metodo porque foram obrigados pela interface Produto
             //que é o tipo do objeto passado
     }
-
     public double getTotal(){
         return total;
     }
-
 }

@@ -1,3 +1,5 @@
+package br.com.casadocodigo.livraria.produtos;
+
 public interface Produto {
 
     double getValor(); // todas as classes que implementarem essa interface presaram ter um metodo com essa assinatura

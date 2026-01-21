@@ -1,4 +1,4 @@
-import com.sun.jdi.InconsistentDebugInfoException;
+package br.com.casadocodigo.livraria;
 
 public class Editora {
 

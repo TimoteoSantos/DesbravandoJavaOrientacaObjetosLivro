@@ -1,4 +1,8 @@
-public class Ebook  extends Livro implements Promocional{
+package br.com.casadocodigo.livraria.produtos;
+
+import br.com.casadocodigo.livraria.Autor;
+
+public class Ebook  extends Livro implements Promocional, Acrescimo {
 
     private String waterMark;
 
@@ -21,5 +25,12 @@ public class Ebook  extends Livro implements Promocional{
         return true;
     }
 
-
+    @Override
+    public boolean acrescimo(double porcentagem) {
+        if (porcentagem > 0.10) {
+            return false;
+        }
+        this.setValor(this.getValor() + (this.getValor() * porcentagem));
+        return true;
+    }
 }
