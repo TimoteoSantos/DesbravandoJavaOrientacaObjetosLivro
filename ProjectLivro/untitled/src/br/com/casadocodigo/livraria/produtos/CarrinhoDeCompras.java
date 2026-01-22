@@ -2,7 +2,8 @@ package br.com.casadocodigo.livraria.produtos;
 
 public class CarrinhoDeCompras {
     //criando um atributo do tipo Produto privado a essa classe
-    private Produto[] produtos = new Produto[10];
+    private Produto[] produtos = new Produto[3];
+
     //um atributo que guarda o total
     private double total;
     private int contador = 0;
@@ -18,4 +19,37 @@ public class CarrinhoDeCompras {
     public double getTotal(){
         return total;
     }
+
+    public void getProdutos() {
+        /* uma forma mais antiga de fazer um for
+
+         */
+
+        for (int i = 0; i <= produtos.length; i++) {
+
+            try {
+
+                Produto produto = produtos[i];
+                if (produto != null) {
+                    System.out.println(produto.getValor());
+                }
+            }catch (ArrayIndexOutOfBoundsException e ){
+                System.out.println("Chamou uma exeção no index: " + i);
+            }
+
+        /*
+        //uma forma mais moderda de fazer um for
+        for (Produto  produtos : produtos){ // tipo nome variavel e objeto
+            if (produtos != null){
+                System.out.println(produtos.getValor()
+                );
+        }
+        */
+
+            System.out.println("Fui execultado");
+    }
+}
+
+
+
 }

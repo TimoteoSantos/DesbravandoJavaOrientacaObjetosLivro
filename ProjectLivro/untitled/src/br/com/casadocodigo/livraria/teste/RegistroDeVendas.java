@@ -27,11 +27,11 @@ public class RegistroDeVendas {
         ebook.acrescimo(0.08);
         System.out.println(ebook.getValor());
 
-
         //enviando para o carrinho de compras
         CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
         carrinho.adiciona(fisico);
-        //System.out.println("Total: " + carrinho.getTotal());
+        carrinho.getProdutos();
+        System.out.println("Total: " + carrinho.getTotal());
     }
 
 }
