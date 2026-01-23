@@ -1,5 +1,7 @@
 package br.com.casadocodigo.livraria.teste;
 
+import br.com.casadocodigo.livraria.exception.ArquivoNaoExiste;
+
 import java.io.FileNotFoundException;
 
 //algumas tarefas como abrir um arquivo ou acessar um banco de dados precisara
@@ -10,9 +12,13 @@ public class Arquivo {
 
     public static void main(String[] arquivos){
         try {
+
             new java.io.FileInputStream("arquivo.txt");
+
         }catch (FileNotFoundException e1){
-            System.out.println("Não consegui encontrar o arquio");
+
+        throw new ArquivoNaoExiste("o arquivo nao existe");
+
         }
     }
 }
