@@ -2,7 +2,7 @@ package br.com.casadocodigo.livraria.teste;
 
 import br.com.casadocodigo.livraria.Autor;
 import br.com.casadocodigo.livraria.produtos.Ebook;
-import  br.com.casadocodigo.livraria.produtos.LivroFisico;
+import br.com.casadocodigo.livraria.produtos.LivroFisico;
 import br.com.casadocodigo.livraria.produtos.CarrinhoDeCompras;
 
 public class RegistroDeVendas {
@@ -33,5 +33,4 @@ public class RegistroDeVendas {
         carrinho.getProdutos();
         System.out.println("Total: " + carrinho.getTotal());
     }
-
 }

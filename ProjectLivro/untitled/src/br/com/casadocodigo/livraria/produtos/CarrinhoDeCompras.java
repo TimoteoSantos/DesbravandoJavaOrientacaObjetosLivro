@@ -25,16 +25,31 @@ public class CarrinhoDeCompras {
 
          */
 
-        for (int i = 0; i <= produtos.length; i++) {
-
+        for (int i = 0; i < produtos.length; i++) {
+            //uma exceção
             try {
+              //se o codigo compilar sera execultado essa parte
 
                 Produto produto = produtos[i];
                 if (produto != null) {
                     System.out.println(produto.getValor());
                 }
             }catch (ArrayIndexOutOfBoundsException e ){
+                //se o codigo entrar aqui é porque o codigo encontrou uma exeção do tipo informado
+                //nesse caso uma exceçao que verificao se o tamanho do array ultrapassou o limite
+
                 System.out.println("Chamou uma exeção no index: " + i);
+                e.printStackTrace();// lembre-se que a letra e é um objeto do tipo da exeção passada
+
+            // podemos combinar diferentes tipos de exceçoes
+            } catch (NullPointerException e){
+
+                System.out.println("O array não foi instanciado");
+
+            // tambem podemos ter uma area onde sempre sera excecultada independe da exceção acontecer ou nao
+            }finally {
+                //finaly é muito util quando precisamos inserrar alguma tarefa sempre que execultarmos o try com desconetar de um banco de dados ou arquivo
+                System.out.println("Eu sempre escrevo essa mensagem");
             }
 
         /*
@@ -45,7 +60,6 @@ public class CarrinhoDeCompras {
                 );
         }
         */
-
             System.out.println("Fui execultado");
     }
 }
