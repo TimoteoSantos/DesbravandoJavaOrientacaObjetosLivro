@@ -1,4 +1,4 @@
-package br.com.casadocodigo.livraria.exception;
+package br.com.casadocodigo.livraria.execoes;
 
 public class ArquivoNaoExiste extends RuntimeException{
 

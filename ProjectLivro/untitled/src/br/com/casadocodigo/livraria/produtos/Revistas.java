@@ -1,6 +1,8 @@
 package br.com.casadocodigo.livraria.produtos;
 
 import br.com.casadocodigo.livraria.Editora;
+import br.com.casadocodigo.livraria.produtos.interfaces.Produto;
+import br.com.casadocodigo.livraria.produtos.interfaces.Promocional;
 
 public class Revistas implements Produto, Promocional {
 

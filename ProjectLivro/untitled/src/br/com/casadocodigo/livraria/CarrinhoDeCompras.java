@@ -1,4 +1,6 @@
-package br.com.casadocodigo.livraria.produtos;
+package br.com.casadocodigo.livraria;
+
+import br.com.casadocodigo.livraria.produtos.interfaces.Produto;
 
 public class CarrinhoDeCompras {
     //criando um atributo do tipo Produto privado a essa classe
@@ -25,6 +27,7 @@ public class CarrinhoDeCompras {
 
          */
 
+        /*
         for (int i = 0; i < produtos.length; i++) {
             //uma exceção
             try {
@@ -52,15 +55,13 @@ public class CarrinhoDeCompras {
                 System.out.println("Eu sempre escrevo essa mensagem");
             }
 
-        /*
+        */
         //uma forma mais moderda de fazer um for
         for (Produto  produtos : produtos){ // tipo nome variavel e objeto
-            if (produtos != null){
+            if (produtos != null) {
                 System.out.println(produtos.getValor()
                 );
-        }
-        */
-            System.out.println("Fui execultado");
+            }
     }
 }
 }

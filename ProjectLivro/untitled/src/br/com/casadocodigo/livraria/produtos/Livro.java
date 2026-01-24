@@ -1,7 +1,8 @@
 package br.com.casadocodigo.livraria.produtos;
 
 import br.com.casadocodigo.livraria.Autor;
-import br.com.casadocodigo.livraria.exception.AutorNuloException;
+import br.com.casadocodigo.livraria.execoes.AutorNuloException;
+import br.com.casadocodigo.livraria.produtos.interfaces.Produto;
 
 /*essa classe implementa a interface Produtos suas classes filhas tambem serao do mesmo tipo Produto */
 public abstract class Livro implements Produto {
@@ -14,13 +15,14 @@ public abstract class Livro implements Produto {
 
     //java permite multiplos construtores
     public Livro(Autor autor){
+        this();//chamando outro construtor que esta sem parametros porem ele deve ser a primeira instrucao
+
         //verificar se o autor é null se for lançar uma exceção
         if (autor == null){
 
             //estamos chamando a classe responsavel por tratar esse erro em especifico
             throw new AutorNuloException("O autor não pode ser null");// enviando a mensagem para o construtor responsavel por tratar esse erro dessa classe
         }
-        this();//chamando outro construtor que esta sem parametros
         this.autor = autor;
 
     }

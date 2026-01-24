@@ -1,9 +1,9 @@
 package br.com.casadocodigo.livraria.teste;
 
 import br.com.casadocodigo.livraria.Autor;
+import br.com.casadocodigo.livraria.CarrinhoDeCompras;
 import br.com.casadocodigo.livraria.produtos.Ebook;
 import br.com.casadocodigo.livraria.produtos.LivroFisico;
-import br.com.casadocodigo.livraria.produtos.CarrinhoDeCompras;
 
 public class RegistroDeVendas {
 
@@ -23,14 +23,18 @@ public class RegistroDeVendas {
         }
 
         Ebook ebook = new Ebook(autor);
+        ebook.setNome("TIMOTEO SANTOS");
+        ebook.setDescricao("O PORQUE DO JAVA");
         ebook.setValor(10.00);
         ebook.acrescimo(0.08);
-        System.out.println(ebook.getValor());
+        //System.out.println(ebook.getValor());
+        ebook.toString();
+
 
         //enviando para o carrinho de compras
         CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
         carrinho.adiciona(fisico);
         carrinho.getProdutos();
-        System.out.println("Total: " + carrinho.getTotal());
+        //System.out.println("Total: " + carrinho.getTotal());
     }
 }

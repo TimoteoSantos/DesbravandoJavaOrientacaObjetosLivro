@@ -1,6 +1,6 @@
 package br.com.casadocodigo.livraria.teste;
 
-import br.com.casadocodigo.livraria.exception.ArquivoNaoExiste;
+import br.com.casadocodigo.livraria.execoes.ArquivoNaoExiste;
 
 import java.io.FileNotFoundException;
 

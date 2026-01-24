@@ -1,4 +1,4 @@
-package br.com.casadocodigo.livraria.produtos;
+package br.com.casadocodigo.livraria.produtos.interfaces;
 
 public interface Produto {
 

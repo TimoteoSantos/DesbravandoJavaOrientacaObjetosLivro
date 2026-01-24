@@ -1,6 +1,7 @@
 package br.com.casadocodigo.livraria.produtos;
 
 import br.com.casadocodigo.livraria.Autor;
+import br.com.casadocodigo.livraria.produtos.interfaces.Promocional;
 
 public class LivroFisico extends  Livro implements Promocional {
 
