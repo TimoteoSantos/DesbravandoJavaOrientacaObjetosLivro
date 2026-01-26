@@ -13,6 +13,18 @@ public class RegistroDeVendas {
         Autor autor = new Autor();
         autor.setNome("Mauricio Aniche");
 
+        Autor autorDois = new Autor();
+        autorDois.setNome("Mauricio Aniche");
+
+        //comprando se objetos sao iguais
+        if (autor.equals(autorDois)){ //estamos chamando o atributo que esta sobrescrito na classe Autor
+
+            System.out.println("Igual");
+
+        }else{
+            System.out.println("Diferente");
+        }
+
         //criando um novo produto nesse caso um Ebook
         LivroFisico fisico = new LivroFisico(autor);
         fisico.setNome("teste");
@@ -29,7 +41,6 @@ public class RegistroDeVendas {
         ebook.acrescimo(0.08);
         //System.out.println(ebook.getValor());
         ebook.toString();
-
 
         //enviando para o carrinho de compras
         CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
