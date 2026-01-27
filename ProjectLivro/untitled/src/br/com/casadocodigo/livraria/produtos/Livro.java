@@ -82,7 +82,6 @@ public abstract class Livro implements Produto {
         }
         System.out.println("--");
     }
-
     boolean temAutor(){
         return this.autor != null;
     }

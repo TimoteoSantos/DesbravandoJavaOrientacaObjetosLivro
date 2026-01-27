@@ -5,7 +5,6 @@ import br.com.casadocodigo.livraria.CarrinhoDeCompras;
 import br.com.casadocodigo.livraria.Editora;
 import br.com.casadocodigo.livraria.produtos.Ebook;
 import br.com.casadocodigo.livraria.produtos.LivroFisico;
-
 import java.util.Random;
 
 public class RegistroDeVendas {
@@ -68,7 +67,7 @@ public class RegistroDeVendas {
         //enviando para o carrinho de compras
         CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
         carrinho.adiciona(fisico);
-        carrinho.getProdutos();
+        carrinho.getProduto();
         //System.out.println("Total: " + carrinho.getTotal());
     }
 }
