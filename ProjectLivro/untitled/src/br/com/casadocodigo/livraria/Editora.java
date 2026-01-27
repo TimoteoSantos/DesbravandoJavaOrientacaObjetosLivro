@@ -29,4 +29,15 @@ public class Editora {
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
     }
+
+    @Override
+    public boolean equals (Object obj){
+
+        //garantir que seja um Autor
+        if (!(obj instanceof  Editora)) return  false;//forma minima de fazer um if que se o obj nao for Autor retorna um false encerrando o metodo
+        //converter o objeto recebido em um Autor
+        Editora editora = (Editora) obj;
+        //compara se o cnpj da editora atual é igual ao que foi chamado pelo metodo equals
+        return this.cnpj.equals(editora.cnpj);
+    }
 }

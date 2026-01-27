@@ -36,6 +36,9 @@ public class Autor {
     @Override
     public boolean equals(Object obj){
 
+        //precisaremos comparar se o nome do autor que esta chamando o metodo ou seja o this
+        //é igual ao passado pelo paramentro
+
         //verificar se a instancia obj é do tipo Autor se nao for
         // retornar false e o codigo para a compilacao desse metodo
         if (!(obj instanceof  Autor)) return false;
