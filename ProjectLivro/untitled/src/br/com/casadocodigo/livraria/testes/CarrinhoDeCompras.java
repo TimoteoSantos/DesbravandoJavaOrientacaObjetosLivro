@@ -1,4 +1,4 @@
-package br.com.casadocodigo.livraria;
+package br.com.casadocodigo.livraria.testes;
 
 import br.com.casadocodigo.livraria.produtos.interfaces.Produto;
 
@@ -7,14 +7,14 @@ import java.util.List;
 
 public class CarrinhoDeCompras {
     //criando um atributo do tipo Produto privado a essa classe
-    private ArrayList<Produto> produtos;
+    private List<Produto> produtos;
 
     //um atributo que guarda o total
     private double total;
     private int contador = 0;
 
     public CarrinhoDeCompras() {
-        this.produtos = new ArrayList<>();
+        this.produtos = new ArrayList<Produto>();
     }
 
     public void adiciona(Produto produto) {
