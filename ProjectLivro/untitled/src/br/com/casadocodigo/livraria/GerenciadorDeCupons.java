@@ -1,27 +1,23 @@
 package br.com.casadocodigo.livraria;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class GerenciadorDeCupons {
-    //quando queremos criar uma lista sem repetiocoes usamos o Set<>
-    private Set<String> cupons ;
+
+    //set<> não permite valores repetidos List<> permite
+    private Map<String, Double> cupons;
 
     public GerenciadorDeCupons(){
 
-        this.cupons = new HashSet<>();
-        cupons.addAll(Arrays.asList(
-          "CUPO74", "CUP158", "CUP14", "CUP52", "CUP21",
-          "CUP221", "CUP91", "CUP327", "CUP410", "CUP275",
-          "CUP484", "CUP207", "CUP96", "CUP119", "CUP174",
-          "CUP291", "CUP1", "CUP115"
-        ));
-    }
+        this.cupons = new HashMap<>();
 
-    public boolean validarCupom(String cupom){// entender que uma String já é um objeto
-        //aqui retonar o retorno do metodo contains() do objeto que o chamou ou seja do this
-        return this.cupons.contains(cupom);// estou passando um objeto mas String é um objeto
+        cupons.put("CAB11", 10.00);
+        cupons.put("CAB22", 12.0);
+        cupons.put("CAB33",13.00);
+        cupons.put("CAB33", 14.0);
+    }
+    
+    public Double validarCupom(String cupom){
+        return this.cupons.get(cupom);
     }
 }

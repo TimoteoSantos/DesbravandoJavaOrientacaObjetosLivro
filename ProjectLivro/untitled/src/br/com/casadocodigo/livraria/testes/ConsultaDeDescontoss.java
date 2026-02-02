@@ -8,8 +8,13 @@ public class ConsultaDeDescontoss {
 
         GerenciadorDeCupons gerenciador  = new GerenciadorDeCupons();
 
-        if (gerenciador.validarCupom("CUP158")){
+        Double desconto = gerenciador.validarCupom("CAB22") ;
+
+        if (desconto > 0.00){
+
             System.out.println("Cupom de desconto válido");
+            System.out.println("O valor do desconto é " + desconto);
+
         }else{
             System.out.println("Esse cupom não existe");
         }
