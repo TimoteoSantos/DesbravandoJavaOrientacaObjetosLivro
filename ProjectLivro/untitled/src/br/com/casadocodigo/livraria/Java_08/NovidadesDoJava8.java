@@ -27,11 +27,19 @@ public class NovidadesDoJava8 {
 
         List<Livro> livros = Arrays.asList(javaoo, java8);
 
+        //comparando usando uma classe
         Collections.sort(livros, new ComparadorPorNome());
 
         for(Livro livro : livros){
 
             System.out.println(livro.getNome());
         }
+
+        //comparando usando lambdas ou seja esse codigo faz a mesma coisa que o codigo acima
+        //porem ultliza expressoes lambdas
+
+        livros.sort(
+                (l1, l2) -> l2.getNome().compareTo(l2.getNome())
+        );
     }
 }
